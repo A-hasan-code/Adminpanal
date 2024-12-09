@@ -1,0 +1,111 @@
+/* Import Google Fonts at the top to avoid errors */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Add Tailwind's base styles */
+
+/* Apply a smooth scrolling behavior to the entire document */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box; /* Add box-sizing rule for better layout control */
+}
+
+/* Base font settings */
+body {
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  background: #f6f6f5; /* A subtle background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Input and select reset for a cleaner, more consistent appearance */
+input,
+select {
+  outline: none;
+  border: 1px solid #ccc; /* Add a subtle border to inputs */
+}
+
+/* Style for .batch_heart component */
+.batch_heart {
+  background: tomato;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  position: absolute;
+  right: -24%;
+  top: -9%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Added smooth transition */
+}
+
+.batch_heart:hover {
+  transform: scale(1.1); /* Slight scale effect on hover for interactivity */
+}
+
+/* Chrome, Safari, Edge, Opera - style number input spinner buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox - remove number input spinner */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.PhoneInput {
+  background-color: #f2f0f0 !important;
+  border-color: none !important;
+}
+/* ProductTable.css */
+
+/* Custom Scrollbar Styles for the AG Grid */
+.ag-theme-alpine .ag-body-viewport {
+  overflow-x: auto !important; /* Horizontal scrollbar */
+}
+
+/* Webkit scrollbar styles for Chrome, Safari, and Edge */
+.ag-theme-alpine .ag-body-viewport::-webkit-scrollbar {
+  height: 6px; /* Set scrollbar height */
+}
+
+.ag-theme-alpine .ag-body-viewport::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light background for the scrollbar track */
+  border-radius: 4px; /* Rounded track edges */
+}
+
+.ag-theme-alpine .ag-body-viewport::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scroll thumb color */
+  border-radius: 4px; /* Rounded thumb */
+}
+
+.ag-theme-alpine .ag-body-viewport::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker thumb on hover */
+}
+
+/* Custom scrollbar styling for vertical scroll as well (optional) */
+.ag-theme-alpine .ag-body-viewport::-webkit-scrollbar-vertical {
+  width: 6px; /* Vertical scrollbar width */
+}
+
+.ag-theme-alpine
+  .ag-body-viewport::-webkit-scrollbar-vertical::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.ag-theme-alpine
+  .ag-body-viewport::-webkit-scrollbar-vertical::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
